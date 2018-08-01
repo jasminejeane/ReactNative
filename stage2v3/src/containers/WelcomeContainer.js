@@ -19,15 +19,25 @@ import WelcomeForm from '../components/WelcomeForm';
  */
 
 class WelcomeContainer extends Component{
+  constuctor(props){
+    super(props)
+  }
   render(){
     return(
-
+      <WelcomeForm onSubmit={this.handleSubmit}/>
     )
+
+    handleSubmit(teamName){
+      RouteActions.tabbar()
+    }
   }
 }
+
 
 const styles = StyleSheet.create({
   container:{
     flex:1
   }
 })
+
+export default WelcomeContainer
